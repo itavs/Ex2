@@ -144,24 +144,4 @@ public class Ex2 {
     private static boolean isValidNeighbour(int i, int j, boolean[][] b) {
         return i >= 0 && i < b.length && j >= 0 && j < b[0].length;
     }
-
-
-    public static int maxAdjacentProduct(int[] numbers) {
-
-        if (numbers == null || numbers.length < 2) {
-            throw new IllegalArgumentException(
-                    "Array must contain at least two elements");
-        }
-        int maxProduct = Integer.MIN_VALUE;
-
-        for (int i = 0; i < numbers.length - 1; i++) {
-            int product = numbers[i] * numbers[i + 1];
-
-            if (product > maxProduct) {
-                maxProduct = product;
-            }
-        }
-
-        return maxProduct;
-    }
 }
