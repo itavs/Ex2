@@ -57,12 +57,10 @@ public class Ex2 {
             return "" + str.charAt(i);
         }
 
-        //Keep character if different from next
         if (str.charAt(i) != str.charAt(i + 1)) {
             return str.charAt(i) + compressString(str, i + 1);
         }
 
-        //Skip duplicate character
         return compressString(str, i + 1);
     }
 
